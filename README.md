@@ -20,6 +20,7 @@ Requerimientos necesarios para el funcionamiento:
 -Tener en funcionamiento docker y XLaunch
  Luego dirigirse al CMD y seguir las siguientes instrucciones:
 - git clone https://github.com/jdSystemIU/detector_neumonia2.git
+- cd detector_neumonia2
 - docker build -t python:latest .
 - docker run -it --rm -e DISPLAY=host.docker.internal:0 --net host python
 ----------------------------------------------------------------------------------
