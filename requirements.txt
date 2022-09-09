@@ -1,0 +1,9 @@
+pyautogui
+pillow
+tkcap
+pydicom
+img2pdf
+matplotlib
+pandas
+tensorflow
+python-xlib
