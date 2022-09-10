@@ -18,7 +18,7 @@ A continuación le explicaremos cómo empezar a utilizarla.
 
 Requerimientos necesarios para el funcionamiento:
 
--Tener en funcionamiento docker
+-Tener en funcionamiento Docker y Xlaunch
  Luego dirigirse al CMD y seguir las siguientes instrucciones:
 - git clone https://github.com/jdSystemIU/detector_neumonia2.git
 - cd detector_neumonia2
