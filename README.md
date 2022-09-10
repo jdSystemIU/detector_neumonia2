@@ -1,5 +1,6 @@
 ## Hola! Bienvenido a la herramienta para la detección rápida de neumonía
 
+## Autores: Daniela Restrepo y Joseph David
 Deep Learning aplicado en el procesamiento de imágenes radiográficas de tórax en formato DICOM con el fin de clasificarlas en 3 categorías diferentes:
 
 1. Neumonía Bacteriana
