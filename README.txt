@@ -1,5 +1,7 @@
 Hola! Bienvenido a la herramienta para la detección rápida de neumonía.
 
+Autores: Daniela Restrepo y Joseph David
+
 A continuación le explicaremos cómo empezar a utilizarla
 
 Requerimientos necesarios para el funcionamiento:
