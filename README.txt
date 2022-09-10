@@ -4,12 +4,13 @@ A continuación le explicaremos cómo empezar a utilizarla
 
 Requerimientos necesarios para el funcionamiento:
 
--Tener en funcionamiento docker y XLaunch
+-Tener en funcionamiento docker
  Luego dirigirse al CMD y seguir las siguientes instrucciones:
-- git clone https://github.com/jdSystemIU/detector_neumonia2.git
-- cd detector_neumonia2
+- git clone https://github.com/jdSystemIU/neumonia_detector
 - docker build -t python:latest .
-- docker run -it --rm -e DISPLAY=host.docker.internal:0 --net host python
+- docker run -it --rm -e DISPLAY=host.docker.internal:0 --net host python bash
+- curl "https://www.dropbox.com/s/yx6n606i7cfcvoz/WilhemNet_86.h5?dl=1&quot; -L -o WilhemNet_86.h5
+- python main.py
 ----------------------------------------------------------------------------------
 
 Uso de la herramienta:
