@@ -12,7 +12,6 @@ Requerimientos necesarios para el funcionamiento:
 - cd detector_neumonia2
 - docker build -t python:latest .
 - docker run -it --rm -e DISPLAY=host.docker.internal:0 --net host python
-- python main.py
 ----------------------------------------------------------------------------------
 
 Uso de la herramienta:
