@@ -39,9 +39,9 @@ Uso de la Interfaz Gráfica:
 
 ## Testing:
 
--cd detector_neumonia2
--python -m unittest test1.py
--python -m unittest test2.py
+- cd detector_neumonia2
+- python -m unittest test1.py
+- python -m unittest test2.py
 
 ## Explicación de los scripts
 
