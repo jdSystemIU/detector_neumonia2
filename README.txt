@@ -12,18 +12,25 @@ Deep Learning aplicado en el procesamiento de imágenes radiográficas de tórax
 Aplicación de una técnica de explicación llamada Grad-CAM para resaltar con un mapa de calor las regiones relevantes de la imagen de entrada.
 
 ---
-## Uso de la herramienta:
+## Uso de la Interfaz Gráfica:
 
-A continuación le explicaremos cómo empezar a utilizarla.
+- Ingrese la cédula del paciente en la caja de texto
+- Presione el botón 'Cargar Imagen', seleccione la imagen del explorador de archivos del computador
+- Presione el botón 'Predecir' y espere unos segundos hasta que observe los resultados
+- Presione el botón 'Guardar' para almacenar la información del paciente en un archivo excel con extensión .csv
+- Presione el botón 'PDF' para descargar un archivo PDF con la información desplegada en la interfaz
+- Presión el botón 'Borrar' si desea cargar una nueva imagen
 
-Requerimientos necesarios para el funcionamiento:
+---
 
--Tener en funcionamiento Docker y Xlaunch
- Luego dirigirse al CMD y seguir las siguientes instrucciones:
-- git clone https://github.com/jdSystemIU/detector_neumonia2.git
+## Testing:
+
+Ejecute los siguientes pasos desde el directorio donde ha realizado el gitclone:
+
 - cd detector_neumonia2
-- docker build -t python:latest .
-- docker run -it --rm -e DISPLAY=host.docker.internal:0 --net host python
+- python -m unittest test1.py
+- python -m unittest test2.py
+
 ----------------------------------------------------------------------------------
 	
 Uso de la Interfaz Gráfica:
