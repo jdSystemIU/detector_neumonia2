@@ -25,7 +25,16 @@ Requerimientos necesarios para el funcionamiento:
 - docker build -t python:latest .
 - docker run -it --rm -e DISPLAY=host.docker.internal:0 --net host python
 ----------------------------------------------------------------------------------
-	
+
+## Testing:
+
+Debe estar en funcionamiento Docker y Xlaunch
+Ejecute los siguientes pasos desde el directorio donde ha realizado el gitclone:
+
+- cd detector_neumonia2
+- python -m unittest test1.py
+- python -m unittest test2.py
+----------------------------------------------------------------------------------
 Uso de la Interfaz Gráfica:
 
 - Ingrese la cédula del paciente en la caja de texto
@@ -36,14 +45,6 @@ Uso de la Interfaz Gráfica:
 - Presión el botón 'Borrar' si desea cargar una nueva imagen
 
 ---
-
-## Testing:
-
-Ejecute los siguientes pasos desde el directorio donde ha realizado el gitclone:
-
-- cd detector_neumonia2
-- python -m unittest test1.py
-- python -m unittest test2.py
 
 ## Explicación de los scripts
 
