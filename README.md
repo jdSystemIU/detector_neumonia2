@@ -39,6 +39,8 @@ Uso de la Interfaz Gráfica:
 
 ## Testing:
 
+Ejecute los siguientes pasos desde el directorio donde ha realizado el gitclone:
+
 - cd detector_neumonia2
 - python -m unittest test1.py
 - python -m unittest test2.py
