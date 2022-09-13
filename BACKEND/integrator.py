@@ -5,6 +5,10 @@ from tensorflow.keras import models
 from INFERENCE import grad_cam
 from INFERENCE import preprocess_img
 from INFERENCE import load_model
+
+#Preprocesa la imagen y luego carga el modelo para hacer el predict
+#Donde la prediccion es una clasificacion dependiendo si es 0,1,2
+
 def predict(array): 
     #   1. call function to pre-process image: it returns image in batch format
     batch_array_img = preprocess_img.preprocess(array)

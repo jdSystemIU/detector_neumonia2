@@ -3,6 +3,8 @@ import unittest
 
 from BACKEND import messages
 
+#Se encarga de que los mensajes que visualiza el usuario sean los correctos
+
 class test1(unittest.TestCase):
     def test(self):
         self.assertAlmostEqual(messages.save_(),"Los datos se guardaron con éxito.")

@@ -21,7 +21,8 @@ from PIL import ImageTk, Image
 from BACKEND import integrator
 
 #Ventana principal de la aplicacion
-#Contiene el codigo necesario para crear la aplicacion
+#Contiene el codigo necesario para crear la UI que visualizara el usuario
+
 class App():
     def __init__(self):
         self.instancia = self

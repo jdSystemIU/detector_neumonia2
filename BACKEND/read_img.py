@@ -3,6 +3,8 @@ import numpy as np
 from PIL import Image
 import cv2
 
+#Realiza la lectura de imagenes tipo dicom, jpg, jpeg y png
+
 def read_dicom_file(path):    
     img = dicom.read_file(path)    
     img_array = img.pixel_array

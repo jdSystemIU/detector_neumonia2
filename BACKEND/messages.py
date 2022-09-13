@@ -11,13 +11,13 @@ import tkcap
 import img2pdf
 import numpy as np
 import time
+#Paquetes propios
 from BACKEND import read_img
-#from BACKEND import integrator
-
 from UI import detector_neumonia
 
-#manage_files = manage_files
-#import integrator
+#Mensajes que visualiza el usuario
+#Se encarga de retornar los mensajes a detector_neumonia.py
+
 save = "Los datos se guardaron con éxito."
 pdf_successful = "El PDF fue generado con éxito."
 confirmation_delete = "Se borrarán todos los datos."

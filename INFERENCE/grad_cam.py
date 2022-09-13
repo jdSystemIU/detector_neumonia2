@@ -7,6 +7,8 @@ import tensorflow as tf
 tf.compat.v1.disable_eager_execution()
 tf.compat.v1.experimental.output_all_intermediates(True)
 
+#Se encarga de cargar el modelo, preprocesarlo y luego crear el mapa de calor que visualizara el usuario
+
 def grad_cam(array): 
     img = preprocess_img.preprocess(array)
     model = load_model.model()

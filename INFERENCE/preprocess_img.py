@@ -1,6 +1,8 @@
 import cv2
 import numpy as np
 
+#Se encarga de preprocesar la imagen realizando una serire de pasos como reajustar el tamaño de la imagen
+
 def preprocess(array):
      array = cv2.resize(array , (512 , 512))
      array = cv2.cvtColor(array, cv2.COLOR_BGR2GRAY)
