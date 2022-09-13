@@ -36,11 +36,11 @@ Uso de la Interfaz Gráfica:
 - Presión el botón 'Borrar' si desea cargar una nueva imagen
 
 ---
+
 Testing:
 -cd detector_neumonia2
 -python -m unittest test1.py
 -python -m unittest test2.py
-
 ## Explicación de los scripts
 
 ## detector_neumonia.py
