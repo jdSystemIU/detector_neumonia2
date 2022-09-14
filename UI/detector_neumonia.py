@@ -135,7 +135,7 @@ class App():
         showinfo(title='PDF', message=messages.pdf_successful_())
 
     def delete(self):
-        answer = askokcancel(title='Confirmación', message=messages.confirmation, icon=WARNING)
+        answer = askokcancel(title='Confirmación', message=messages.confirmation_(), icon=WARNING)
         if answer:
             self.text1.delete(0, 'end')
             self.text2.delete(1.0, 'end')

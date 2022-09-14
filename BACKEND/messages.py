@@ -22,7 +22,7 @@ save = "Los datos se guardaron con éxito."
 pdf_successful = "El PDF fue generado con éxito."
 confirmation_delete = "Se borrarán todos los datos."
 delete_successful = "Los datos se borraron con éxito"
-
+confirmation = "Desea borrar los datos?"
 def save_():
         return save
         
@@ -34,6 +34,9 @@ def confirmation_delete_():
 
 def delete_successful_():
         return delete_successful 
+
+def confirmation_():
+        return confirmation
         
 
 
