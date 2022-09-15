@@ -10,5 +10,5 @@ class test1(unittest.TestCase):
         self.assertAlmostEqual(messages.save_(),"Los datos se guardaron con éxito.")
         self.assertAlmostEqual(messages.pdf_successful_(),"El PDF fue generado con éxito.")
         self.assertAlmostEqual(messages.confirmation_(),"Se borrarán todos los datos.")
-        self.assertAlmostEqual(messages.confirmation_delete_(),"Se borrarán todos los datos.")
+        self.assertAlmostEqual(messages.confirmation_delete_(),"Se borraron todos los datos.")
         self.assertAlmostEqual(messages.delete_successful_(), "Los datos se borraron con éxito")

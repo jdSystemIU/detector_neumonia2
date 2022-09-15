@@ -20,7 +20,8 @@ from UI import detector_neumonia
 # Mensajes de visualización para el usuario.
 save = "Los datos se guardaron con éxito."
 pdf_successful = "El PDF fue generado con éxito."
-confirmation_delete = "Se borrarán todos los datos."
+confirmation = "Se borrarán todos los datos."
+confirmation_delete = "Se borraron todos los datos."
 delete_successful = "Los datos se borraron con éxito"
 
 # Funciones para retornar los mensajes a detector_neumonia.py.
@@ -29,6 +30,9 @@ def save_():
         
 def pdf_successful_():
         return pdf_successful
+
+def confirmation_():
+        return confirmation
 
 def confirmation_delete_():
         return confirmation_delete

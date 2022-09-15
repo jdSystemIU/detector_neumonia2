@@ -145,7 +145,6 @@ class App():
             showinfo(title='Borrar', message=messages.confirmation_delete_())    
 
            
-
 def main():
     my_app = App()
     return 0

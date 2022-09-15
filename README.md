@@ -24,12 +24,14 @@ Requerimientos necesarios para el funcionamiento:
 4. Instale Docker en su escritorio. 
 5. Ejecute e inicialice el servicio de Docker.
 6. Diríjase al CMD y siga las siguientes instrucciones:
-    - git clone https://github.com/jdSystemIU/detector_neumonia2.git
-    - cd detector_neumonia2
+    - git clone https://github.com/Danielaregal/detector_neumonia_demo.git
+    - cd detector_neumonia_demo
     - docker build -t python:latest .
-    Linux o Mac:
+    
+    - Linux o Mac:
     - docker run -it –rm -v /tmp/.X11-unix:/tmp/.X11-unix –net host -e DISPLAY=$DISPLAY python
-    Windows
+
+    - Windows:
     - docker run -it --rm -e DISPLAY=host.docker.internal:0 --net host python 
 
 Nota: Aplique los pasos 1, 2 y 3, en el caso de que su sistema operativo sea Windows. De lo contrario, omita los mismos. 
@@ -40,7 +42,7 @@ Nota: Aplique los pasos 1, 2 y 3, en el caso de que su sistema operativo sea Win
 Asegúrese de que este en funcionamiento Docker y Xlaunch.
 Ejecute los siguientes pasos desde el directorio donde ha realizado el gitclone:
 
-- cd detector_neumonia2
+- cd detector_neumonia_demo
 - docker run -it --rm -e DISPLAY=host.docker.internal:0 --net host python bash
 - python -m unittest test1.py
 - python -m unittest test2.py
