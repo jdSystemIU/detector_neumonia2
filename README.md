@@ -29,7 +29,7 @@ Requerimientos necesarios para el funcionamiento:
     - docker build -t python:latest .
     - Linux o Mac:
     - docker run -it –rm -v /tmp/.X11-unix:/tmp/.X11-unix –net host -e DISPLAY=$DISPLAY python
-    - Windows
+    - Windows:
     - docker run -it --rm -e DISPLAY=host.docker.internal:0 --net host python 
 
 Nota: Aplique los pasos 1, 2 y 3, en el caso de que su sistema operativo sea Windows. De lo contrario, omita los mismos. 
