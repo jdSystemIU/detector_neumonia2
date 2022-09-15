@@ -1,9 +1,8 @@
-#from BACKEND import manage_files
+# Paquete propio.
 from UI import detector_neumonia
 
-
+# Función para correr detector_neumonia.py
 def main():
-    #Corremos neumonio
     detector_neumonia.App()
     
 if __name__ == '__main__':

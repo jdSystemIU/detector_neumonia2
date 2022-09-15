@@ -1,7 +1,4 @@
-
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
+# Librerías
 from email import message
 from tkinter import *
 from tkinter import ttk, font, filedialog, Entry
@@ -13,11 +10,12 @@ import tkcap
 import img2pdf
 import numpy as np
 import time
+from PIL import ImageTk, Image
+
 # -----------------------------
-#   Scripts 
+#  Paquetes propios
 from BACKEND import messages
 from BACKEND import read_img
-from PIL import ImageTk, Image
 from BACKEND import integrator
 
 #Ventana principal de la aplicacion
@@ -29,13 +27,13 @@ class App():
         self.root = Tk()
         self.root.title("Herramienta para la detección rápida de neumonía")
 
-        #   BOLD FONT
+        #  Bold Font (Negrita en el texto)
         fonti = font.Font(weight='bold')
 
         self.root.geometry("815x560")        
         self.root.resizable(0,0)
         
-        #   LABELS
+        #  Etiquetas
         self.lab1 = ttk.Label(self.root, text="Imagen Radiográfica", font=fonti)
         self.lab2 = ttk.Label(self.root, text="Imagen con Heatmap", font=fonti)
         self.lab3 = ttk.Label(self.root, text="Resultado:", font=fonti)
@@ -43,30 +41,31 @@ class App():
         self.lab5 = ttk.Label(self.root, text="SOFTWARE PARA EL APOYO AL DIAGNÓSTICO MÉDICO DE NEUMONÍA", font=fonti)
         self.lab6 = ttk.Label(self.root, text="Probabilidad:", font=fonti)
 
-        #   TWO STRING VARIABLES TO CONTAIN ID AND RESULT
+        #  Dos variables de tipo String para "ID" y "RESULT"
         self.ID = StringVar()
         self.result = StringVar()
 
-        #   TWO INPUT BOXES
+        #  Dos "Boxes" de entrada. 
         self.text1 = ttk.Entry(self.root, textvariable=self.ID, width=10)
 
-        #   GET ID
+        #  Obtención de ID. 
         self.ID_content = self.text1.get()
 
-        #   TWO IMAGE INPUT BOXES
+        #  Dos "Boxes" de entrada de imagén.
         self.text_img1 = Text(self.root, width=31, height=15)
         self.text_img2 = Text(self.root, width=31, height=15)
         self.text2 = Text(self.root)
         self.text3 = Text(self.root)
-        #Instanciar manage_files
-        #   BUTTONS
+        
+        # Instancia manage_files.
+        # Botones.
         self.button1 = ttk.Button(self.root, text="Predecir", state='disabled', command=self.run_model) 
         self.button2 = ttk.Button(self.root, text="Cargar Imagen", command=self.load_img_file)
         self.button3 = ttk.Button(self.root, text="Borrar", command=self.delete)
         self.button4 = ttk.Button(self.root, text="PDF", command=self.create_pdf)
         self.button6 = ttk.Button(self.root, text="Guardar", command=self.save_results_csv)
 
-        #   WIDGETS POSITIONS   
+        # Posición de los "Widgets"
         self.lab1.place(x=110, y=65)
         self.lab2.place(x=545, y=65)        
         self.lab3.place(x=500, y=350)
@@ -84,19 +83,20 @@ class App():
         self.text_img1.place(x=65, y=90)
         self.text_img2.place(x=500, y=90)
 
-        #   FOCUS ON PATIENT ID
+        # "Focus" en el ID del Paciente. 
         self.text1.focus_set()
 
-        #  se reconoce como un elemento de la clase
+        # Reconocimiento como un elemento de la clase.
         self.array = None 
 
-        #   NUMERO DE IDENTIFICACIÓN PARA GENERAR PDF
+        # Número de identificación para generar PDF.
         self.reportID = 0
 
-        #   RUN LOOP
+        # Run Loop.
         self.root.mainloop()  
-        
-    #   METHODS
+
+
+    # Métodos
 
     def load_img_file(self):
         filepath = filedialog.askopenfilename(initialdir="/", title="Select image", filetypes=(('DICOM','*.dcm'),('JPEG','*.jpeg'),('jpg files','*.jpg'),('png files','*.png')))
@@ -135,7 +135,7 @@ class App():
         showinfo(title='PDF', message=messages.pdf_successful_())
 
     def delete(self):
-        answer = askokcancel(title='Confirmación', message=messages.confirmation_(), icon=WARNING)
+        answer = askokcancel(title='Confirmación', message=messages.confirmation, icon=WARNING)
         if answer:
             self.text1.delete(0, 'end')
             self.text2.delete(1.0, 'end')

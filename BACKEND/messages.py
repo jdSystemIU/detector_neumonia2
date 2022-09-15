@@ -1,4 +1,5 @@
 
+# Librerías.
 from email import message
 from tkinter import *
 from tkinter import ttk, font, filedialog, Entry
@@ -11,18 +12,18 @@ import tkcap
 import img2pdf
 import numpy as np
 import time
-#Paquetes propios
+
+# Paquetes propios.
 from BACKEND import read_img
 from UI import detector_neumonia
 
-#Mensajes que visualiza el usuario
-#Se encarga de retornar los mensajes a detector_neumonia.py
-
+# Mensajes de visualización para el usuario.
 save = "Los datos se guardaron con éxito."
 pdf_successful = "El PDF fue generado con éxito."
 confirmation_delete = "Se borrarán todos los datos."
 delete_successful = "Los datos se borraron con éxito"
-confirmation = "Desea borrar los datos?"
+
+# Funciones para retornar los mensajes a detector_neumonia.py.
 def save_():
         return save
         
@@ -34,9 +35,6 @@ def confirmation_delete_():
 
 def delete_successful_():
         return delete_successful 
-
-def confirmation_():
-        return confirmation
         
 
 

@@ -1,10 +1,10 @@
+# Librerías. 
 import pydicom as dicom
 import numpy as np
 from PIL import Image
 import cv2
 
-#Realiza la lectura de imagenes tipo dicom, jpg, jpeg y png
-
+# Función para lectura de imágenes en formato DICOM. 
 def read_dicom_file(path):    
     img = dicom.read_file(path)    
     img_array = img.pixel_array
@@ -15,6 +15,7 @@ def read_dicom_file(path):
     img_RGB = cv2.cvtColor(img2,cv2.COLOR_GRAY2RGB)        
     return img_RGB, img2show
 
+# Función para lectura de imágenes en formato JPG, JPEG.
 def read_jpg_file(path):
     img = cv2.imread(path)
     img_array = np.asarray(img)

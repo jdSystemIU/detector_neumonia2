@@ -1,20 +1,21 @@
-import numpy as np
+# Librerias
 import numpy as np
 import tensorflow as tf
 from tensorflow.keras import models
+
+# Paquetes propios
 from INFERENCE import grad_cam
 from INFERENCE import preprocess_img
 from INFERENCE import load_model
 
-#Preprocesa la imagen y luego carga el modelo para hacer el predict
-#Donde la prediccion es una clasificacion dependiendo si es 0,1,2
+# Función para preprocesar la imagén y cargar el modelo, a fin de realizar la predicción respecitva. 
+# En este sentido, la predicción es la clasificación de la imagen en alguna de las clases 0, 1, 2. 
 
 def predict(array): 
-    #   1. call function to pre-process image: it returns image in batch format
+    # Funcion de call para preprocesar la imagén. Devuelve la imagen en formato por lotes. 
     batch_array_img = preprocess_img.preprocess(array)
-    #   2. call function to load model and predict: it returns predicted class and probability
+    # Llamado a la función para cargar el modelo y predecir: devuelve la clase y la probabilidad predichas.
     model = load_model.model()
-    #model_cnn = tf.keras.models.load_model('conv_MLP_84.h5')
     prediction = np.argmax(model.predict(batch_array_img))
     proba = np.max(model.predict(batch_array_img))*100
     label = ''
@@ -24,7 +25,7 @@ def predict(array):
         label = 'normal'
     if prediction == 2:
         label = 'viral'
-    #   3. call function to generate Grad-CAM: it returns an image with a superimposed heatmap    
+    # Función de call para generar "Grad-CAM": devuelve una imagen con un mapa de calor superpuesto.
     heatmap = grad_cam.grad_cam(array)
     return(label, proba, heatmap)
 

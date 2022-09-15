@@ -1,3 +1,4 @@
+# Librerías. 
 import cv2
 import numpy as np
 from INFERENCE import preprocess_img
@@ -7,7 +8,7 @@ import tensorflow as tf
 tf.compat.v1.disable_eager_execution()
 tf.compat.v1.experimental.output_all_intermediates(True)
 
-#Se encarga de cargar el modelo, preprocesarlo y luego crear el mapa de calor que visualizara el usuario
+# Función para cargar el modelo, preprocesarlo y luego crear el mapa de calor que visualizará el usuario.
 
 def grad_cam(array): 
     img = preprocess_img.preprocess(array)
@@ -22,10 +23,10 @@ def grad_cam(array):
     pooled_grads_value, conv_layer_output_value = iterate(img)
     for filters in range(64):
         conv_layer_output_value[:,:,filters] *= pooled_grads_value[filters]
-    #creating the heatmap
+    # Creación del mapa de calor. 
     heatmap = np.mean(conv_layer_output_value, axis = -1)
-    heatmap = np.maximum(heatmap, 0)# ReLU
-    heatmap /= np.max(heatmap)# normalize
+    heatmap = np.maximum(heatmap, 0)
+    heatmap /= np.max(heatmap)
     heatmap = cv2.resize(heatmap, (img.shape[1], img.shape[2]))
     heatmap = np.uint8(255 * heatmap)
     heatmap = cv2.applyColorMap(heatmap, cv2.COLORMAP_JET)
