@@ -24,7 +24,7 @@ Requerimientos necesarios para el funcionamiento:
 4. Instale Docker en su escritorio. 
 5. Ejecute e inicialice el servicio de Docker.
 6. Diríjase al CMD y siga las siguientes instrucciones:
-    - git clone https://github.com/Danielaregal/detector_neumonia_demo.git
+    - git clone https://github.com/jdSystemIU/detector_neumonia2.git
     - cd detector_neumonia_demo
     - docker build -t python:latest .
     - Linux o Mac:
